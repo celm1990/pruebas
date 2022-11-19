@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_paciente_tree" model="ir.ui.view">
+        <field name="name">paciente.tree</field>
+        <field name="model">paciente</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_paciente_search" model="ir.ui.view">
+        <field name="name">paciente.search</field>
+        <field name="model">paciente</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_paciente_tree" model="ir.actions.act_window">
+        <field name="name">Pacientes</field>
+        <field name="res_model">paciente</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field ref="view_paciente_tree" name="view_id"/>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="search_view_id" ref="view_paciente_search"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Crear Paciente
+          </p><p>
+            Create invoices, register payments and keep track of the discussions with your customers.
+          </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_paciente" name="Pacientes" sequence="1"/>
+    <menuitem action="action_paciente_tree" id="menu_action_paciente_tree" parent="menu_paciente" sequence="1"/>
+</odoo>
