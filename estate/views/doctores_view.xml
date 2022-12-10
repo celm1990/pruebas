@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_doctor_tree" model="ir.ui.view">
+        <field name="name">doctor.tree</field>
+        <field name="model">doctor</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_doctor_form" model="ir.ui.view">
+        <field name="name">doctor.form</field>
+        <field name="model">doctor</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                    <field name="paciente_ids"/>
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="view_doctor_search" model="ir.ui.view">
+        <field name="name">doctor.search</field>
+        <field name="model">doctor</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_doctor_tree" model="ir.actions.act_window">
+        <field name="name">Doctores</field>
+        <field name="res_model">doctor</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field ref="view_doctor_tree" name="view_id"/>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="search_view_id" ref="view_doctor_search"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Crear Doctor
+          </p><p>
+            Create invoices, register payments and keep track of the discussions with your customers.
+          </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_doctor" name="Doctores" sequence="1"/>
+    <menuitem action="action_doctor_tree" id="menu_action_doctor_tree" parent="menu_doctor" sequence="1"/>
+</odoo>

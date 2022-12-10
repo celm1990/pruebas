@@ -14,6 +14,7 @@
         "security/estate_security.xml",
         "security/ir.model.access.csv",
         "views/pacientes_view.xml",
+        "views/doctores_view.xml",
     ],
 
     'installable': True,

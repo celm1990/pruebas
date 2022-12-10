@@ -1,3 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_paciente_admin,access_paciente_admin,model_paciente,group_estate_admin,1,1,1,1
 access_paciente_user,access_paciente_user,model_paciente,group_estate_user,1,0,0,0
+access_doctor_admin,access_doctor_admin,model_doctor,group_estate_admin,1,1,1,1
+access_doctor_user,access_doctor_user,model_doctor,group_estate_user,1,0,0,0
+
