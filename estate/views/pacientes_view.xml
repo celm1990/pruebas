@@ -7,6 +7,7 @@
             <tree>
                 <field name="name"/>
                 <field name="doctor_id"/>
+                <field name="apellido_doctor"/>
             </tree>
         </field>
     </record>
@@ -27,9 +28,13 @@
                     <group>
                         <group>
                             <field name="name"/>
+                            <field name="price_unit"/>
+                            <field name="product_qty"/>
+                            <field name="subtotal"/>
                         </group>
                         <group>
                             <field name="doctor_id"/>
+                            <field name="apellido_doctor"/>
                             <field name="doctor_ids"/>
                         </group>
                     </group>
