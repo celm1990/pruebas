@@ -13,6 +13,7 @@
     'data': [
         "security/estate_security.xml",
         "security/ir.model.access.csv",
+        "reports/product_list.xml",
         "views/pacientes_view.xml",
         "views/doctores_view.xml",
     ],
